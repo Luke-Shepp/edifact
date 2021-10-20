@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE7257BC-42FD-412F-8213-23BE58E519C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EdiFact</RootNamespace>
+    <AssemblyName>EdiFact</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="indice.Edi, Version=1.9.18.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\indice.Edi.1.9.18\lib\net45\indice.Edi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BGM.cs" />
+    <Compile Include="CPS.cs" />
+    <Compile Include="CUX.cs" />
+    <Compile Include="DTM.cs" />
+    <Compile Include="Enums\CurrencyDetailType.cs" />
+    <Compile Include="Enums\CurrencyType.cs" />
+    <Compile Include="Enums\DateFormat.cs" />
+    <Compile Include="Enums\DateType.cs" />
+    <Compile Include="Enums\DocumentType.cs" />
+    <Compile Include="Enums\IdentifierType.cs" />
+    <Compile Include="Enums\MarkingInstructions.cs" />
+    <Compile Include="Enums\MessageFunction.cs" />
+    <Compile Include="Enums\MonetaryAmountType.cs" />
+    <Compile Include="Enums\Place.cs" />
+    <Compile Include="Enums\ProductIdType.cs" />
+    <Compile Include="Enums\QuantityType.cs" />
+    <Compile Include="Enums\TaxType.cs" />
+    <Compile Include="FTX.cs" />
+    <Compile Include="GIN.cs" />
+    <Compile Include="IMD.cs" />
+    <Compile Include="LIN.cs" />
+    <Compile Include="LOC.cs" />
+    <Compile Include="MOA.cs" />
+    <Compile Include="NAD.cs" />
+    <Compile Include="PAC.cs" />
+    <Compile Include="PCI.cs" />
+    <Compile Include="PIA.cs" />
+    <Compile Include="PRI.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QTY.cs" />
+    <Compile Include="RFF.cs" />
+    <Compile Include="TAX.cs" />
+    <Compile Include="TopLevel\ASN.cs" />
+    <Compile Include="TopLevel\EdiFactDocument.cs" />
+    <Compile Include="TopLevel\Invoice.cs" />
+    <Compile Include="TopLevel\PurchaseOrder.cs" />
+    <Compile Include="UNB.cs" />
+    <Compile Include="UNH.cs" />
+    <Compile Include="UNS.cs" />
+    <Compile Include="UNT.cs" />
+    <Compile Include="UNZ.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
